@@ -14,6 +14,10 @@ public final class Timetable {
     }
 
     public void addSession(TrainingSession session) {
+        if (session == null) {
+            throw new NullPointerException("TrainingSession is null");
+        }
+
         Map<LocalTime,List<TrainingSession>> byTimeList = weekSessions.get(session.dayOfWeek());
         List<TrainingSession> list = byTimeList.getOrDefault(session.timeOfDay(),new ArrayList<>());
         list.add(session);

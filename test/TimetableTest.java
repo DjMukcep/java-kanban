@@ -134,4 +134,9 @@ public class TimetableTest {
         assertEquals(couch2,timetable.getCountByCoaches().getFirst().getKey());
         assertEquals(coach1,timetable.getCountByCoaches().getLast().getKey());
     }
+
+    @Test
+    void shouldThrowNullPointerIfNullPassed() {
+        assertThrows(NullPointerException.class,() -> timetable.addSession(null));
+    }
 }
