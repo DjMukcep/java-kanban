@@ -1,2 +1,2 @@
-# java-kanban
-Repository for homework project.
+# Gym master
+Добавлена внутренняя реализация расписания занятий.
